@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>kBlog Delete</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/materialize.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <h3>Delete a kBlog user</h3>
+    <form action="/users/{{user.id}}?_method=DELETE" method="POST">
+        <h5>Is this the user you want to delete?</h5>
+        <p>This action can't be undone</p>
+        <img src="{{user.img_url}}" alt="" width="100px">
+        <p>
+            Name: {{user.full_name}}<br>
+            Username: {{user.username}}
+        </p>
+
+        <button class="btn waves-effect waves-light" type="submit">Delete this user
+            <i class="material-icons left">edit</i>
+        </button>
+    </form>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <script type="text/javascript" src="/javascripts/materialize.min.js"></script>
+
+</body>
+</html>
